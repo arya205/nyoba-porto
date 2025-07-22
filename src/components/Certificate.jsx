@@ -57,7 +57,7 @@ const Certificate = ({ ImgSertif }) => {
 					}}>
 					<img
 						className="certificate-image"
-						src={ImgSertif}
+						src={`certificates/${ImgSertif}`}
 						alt="Certificate"
 						style={{
 							width: "100%",
