@@ -101,18 +101,36 @@ function a11yProps(index) {
 }
 
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
-  { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
+  { icon: "skills/html.svg", language: "HTML" },
+  { icon: "skills/css.svg", language: "CSS" },
+  { icon: "skills/javascript.svg", language: "JavaScript" },
+  { icon: "skills/php.svg", language: "PHP" },
+  { icon: "skills/tailwind.svg", language: "Tailwind" },
+  { icon: "skills/bootstrap.svg", language: "Bootstrap" },
+  { icon: "skills/vite.svg", language: "Vite" },
+  { icon: "skills/flutter.svg", language: "Flutter" },
+  { icon: "skills/reactjs.svg", language: "React" },
+  { icon: "skills/python.svg", language: "Python" },
+  { icon: "skills/nodejs.svg", language: "Node JS" },
+  { icon: "skills/mysql.svg", language: "MySql" },
+  { icon: "skills/firebase.svg", language: "Firebase" },
+  { icon: "skills/mongoDB.svg", language: "Mongo DB" },
+  { icon: "skills/postgresql.svg", language: "PostgreSql" },
+  { icon: "skills/figma.svg", language: "Figma" },
+  { icon: "skills/vercel.svg", language: "Vercel" },
+  { icon: "skills/git.svg", language: "Git" },
+];
+
+const sertifData = [
+  "sertif1.jpg",
+  "sertif2.jpg",
+  "sertif3.jpg",
+  "sertif4.jpg",
+  "sertif5.jpg",
+  "sertif6.jpg",
+  "sertif7.jpg",
+  "sertif8.jpg",
+  "sertif9.jpg",
 ];
 
 export default function FullWidthTabs() {
@@ -126,7 +144,6 @@ export default function FullWidthTabs() {
   const initialItems = isMobile ? 4 : 6;
 
   useEffect(() => {
-    // Initialize AOS once
     AOS.init({
       once: false, // This will make animations occur only once
     });
@@ -327,13 +344,13 @@ export default function FullWidthTabs() {
           <TabPanel value={value} index={1} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
-                {displayedCertificates.map((certificate, index) => (
+                {sertifData.map((certificate, index) => (
                   <div
                     key={index}
                     data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
-                    <Certificate ImgSertif={certificate.Img} />
+                    <Certificate ImgSertif={certificate} />
                   </div>
                 ))}
               </div>
