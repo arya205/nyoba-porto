@@ -152,11 +152,11 @@ export default function FullWidthTabs() {
   const fetchData = useCallback(async () => {
     try {
       const projectCollection = collection(db, "projects");
-      const certificateCollection = collection(db, "certificates");
+      // const certificateCollection = collection(db, "certificates");
 
       const [projectSnapshot, certificateSnapshot] = await Promise.all([
         getDocs(projectCollection),
-        getDocs(certificateCollection),
+        // getDocs(certificateCollection),
       ]);
 
       const projectData = projectSnapshot.docs.map((doc) => ({
@@ -165,10 +165,10 @@ export default function FullWidthTabs() {
         TechStack: doc.data().TechStack || [],
       }));
 
-      const certificateData = certificateSnapshot.docs.map((doc) => doc.data());
+      // const certificateData = certificateSnapshot.docs.map((doc) => doc.data());
 
       setProjects(projectData);
-      setCertificates(certificateData);
+      setCertificates(sertifData);
 
       // Store in localStorage
       localStorage.setItem("projects", JSON.stringify(projectData));
