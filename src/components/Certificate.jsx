@@ -61,7 +61,7 @@ const Certificate = ({ ImgSertif }) => {
 						alt="Certificate"
 						style={{
 							width: "100%",
-							height: "auto",
+							height: "230px",
 							display: "block",
 							objectFit: "cover",
 							filter: "contrast(1.10) brightness(0.9) saturate(1.1)",
@@ -178,7 +178,7 @@ const Certificate = ({ ImgSertif }) => {
 
 					{/* Modal Image */}
 					<img
-						src={ImgSertif}
+						src={`certificates/${ImgSertif}`}
 						alt="Certificate Full View"
 						style={{
 							display: "block",
